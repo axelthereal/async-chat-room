@@ -27,8 +27,13 @@ app.use(session({
 
 // Routing
 app.get("/", (req, res)=>{
+    //set dynamic view title
     viewcontext.view = "Home";
+
+    // add view context (data variable)
     res.locals.data = viewcontext;
+
+    // render page
     res.render("pages/home");
 });
 
