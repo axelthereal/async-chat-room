@@ -4,10 +4,7 @@ const bodyParser = require("body-parser");
 const session = require("express-session");
 
 // Global variables
-let port = 3030;
-let viewcontext = {
-    "view": ""
-}
+const port = 3030;
 
 // Template Engine
 app.set("view engine", "ejs");
@@ -24,22 +21,10 @@ app.use(session({
 }));
 
 
-
-// Routing
-app.get("/", (req, res)=>{
-    //set dynamic view title
-    viewcontext.view = "Home";
-
-    // add view context (data variable)
-    res.locals.data = viewcontext;
-
-    // render page
-    res.render("pages/home");
-});
-
-
+// Routing Handlers
+app.use("/", require("./routes/homeRouter"));
 
 // Listen to port
-app.listen(port, (err)=>{
+app.listen(port, ()=>{
     console.log(`Server running on port: ${port}`);
 });
