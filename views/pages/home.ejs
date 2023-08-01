@@ -1,5 +1,30 @@
 <%- include("../headers/header"); %>
 
+<script>
+    const { createApp } = Vue;
+</script>
 
+<main id="homeApp">
+<h1>App</h1>
+</main>
 
+<%- include("../headers/pageLoader"); %>
+<script>
+    const homeApp = createApp({
+        data: function(){
+          return { 
+          }
+        },
+        methods: { 
+          displayBody(){
+             document.querySelector("#homeApp").style.display = "block"; 
+             document.querySelector("#loaderApp").style.display = "none"; 
+          }
+        },
+       mounted() {
+         document.querySelector("#homeApp").style.display = "none";
+         setTimeout(this.displayBody, 4000);
+       },
+     }).mount("#homeApp");
+</script>
 <%- include("../headers/footer"); %>
