@@ -5,6 +5,9 @@ const session = require("express-session");
 
 // Global variables
 let port = 3030;
+let viewcontext = {
+    "view": ""
+}
 
 // Template Engine
 app.set("view engine", "ejs");
@@ -24,6 +27,8 @@ app.use(session({
 
 // Routing
 app.get("/", (req, res)=>{
+    viewcontext.view = "Home";
+    res.locals.data = viewcontext;
     res.render("pages/home");
 });
 
