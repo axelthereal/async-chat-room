@@ -4,8 +4,8 @@
     const { createApp } = Vue;
 </script>
 
-<main id="homeApp">
-<h1>App</h1>
+<main id="homeApp" class="container">
+<h1>{{ test }}</h1>
 </main>
 
 <%- include("../headers/pageLoader"); %>
@@ -13,6 +13,7 @@
     const homeApp = createApp({
         data: function(){
           return { 
+            test: "Home Page"
           }
         },
         methods: { 
