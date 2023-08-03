@@ -2,16 +2,21 @@ import express, {static as static_} from "express";
 const app = express();
 import bodyparser from "body-parser";
 import session from "express-session";
-import homeRouter from "./routes/homeRouter.js";
+import cors from "cors";
+import path from "path";
+import { fileURLToPath } from "url";
 
 // Global variables
 const port = 3030;
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename); 
 
 // Template Engine
 app.set("view engine", "ejs");
 
 // Middlewares
-app.use("/assets", static_("static"));
+app.use(cors());
+//app.use("/assets", static_("static"));
 app.use(bodyparser.urlencoded({ extended: false }));
 app.use(bodyparser.json());
 app.use(session({
@@ -21,8 +26,8 @@ app.use(session({
        cookie: {secure:false}
 }));
 
-// Routing Handlers
-app.use("/", homeRouter);
+// Routing Handlers 
+app.use("/", express.static(path.join(__dirname, "./client/dist")));
 
 // Listen to port
 app.listen(port, ()=>{
