@@ -17,6 +17,9 @@
      },
      components: {
       SplashScreen
+     },
+     created(){
+       document.title = "ChatRoom | Home";
      } 
   }
 </script>
