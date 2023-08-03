@@ -26,7 +26,10 @@ app.use(session({
 }));
 
 // Routing Handlers 
-app.use("/", express.static(path.join(__dirname, "./client/dist")));
+//publicPath: process.env.NODE_ENV === 'production' ? '/' : ''
+app.use("/", express.static(path.join(__dirname, "client/dist")));
+app.use("/home", express.static(path.join(__dirname, "client/dist")));
+app.use("/signup", express.static(path.join(__dirname, "client/dist")));
 
 // Listen to port
 app.listen(port, ()=>{

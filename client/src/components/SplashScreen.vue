@@ -2,7 +2,7 @@
     <div class="loader" id="AppLoader" :style="{'display': getDisplayState }">
     <div class="page-loader d-flex flex-column justify-content-between align-items-center">
         <img src="../assets/images/logo_min.png" width="75" class="loader-icon" alt="page-loader-icon">
-        <span class="loader-title fs-3 fw-bold txt-dark-light mt-2">ChatRoom App</span>
+        <span class="loader-title fs-3 fw-bold txt-dark-light mt-2">blox Messenger</span>
         <span class="loader-bar d-block rounded-4 mt-4"><span class="bar d-block rounded-4"></span></span>
     </div> 
     </div>
