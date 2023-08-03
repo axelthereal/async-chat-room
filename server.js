@@ -15,8 +15,7 @@ const __dirname = path.dirname(__filename);
 app.set("view engine", "ejs");
 
 // Middlewares
-app.use(cors());
-//app.use("/assets", static_("static"));
+app.use(cors()); 
 app.use(bodyparser.urlencoded({ extended: false }));
 app.use(bodyparser.json());
 app.use(session({
