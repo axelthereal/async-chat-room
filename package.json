@@ -2,6 +2,7 @@
   "name": "async-chat-room",
   "version": "1.0.0",
   "description": "A javascript chat room - demo project",
+  "type": "module",
   "main": "server.js",
   "scripts": {
     "start": "node --watch server.js",

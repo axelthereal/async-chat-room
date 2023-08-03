@@ -1,7 +1,8 @@
-const express = require("express");
+import express, {static as static_} from "express";
 const app = express();
-const bodyParser = require("body-parser");
-const session = require("express-session");
+import bodyparser from "body-parser";
+import session from "express-session";
+import homeRouter from "./routes/homeRouter.js";
 
 // Global variables
 const port = 3030;
@@ -10,9 +11,9 @@ const port = 3030;
 app.set("view engine", "ejs");
 
 // Middlewares
-app.use("/assets", express.static("static"));
-app.use(bodyParser.urlencoded({ extended: false }));
-app.use(bodyParser.json());
+app.use("/assets", static_("static"));
+app.use(bodyparser.urlencoded({ extended: false }));
+app.use(bodyparser.json());
 app.use(session({
        secret: "$node235Tvf23opml@sdf",
        resave: false,
@@ -20,9 +21,8 @@ app.use(session({
        cookie: {secure:false}
 }));
 
-
 // Routing Handlers
-app.use("/", require("./routes/homeRouter"));
+app.use("/", homeRouter);
 
 // Listen to port
 app.listen(port, ()=>{

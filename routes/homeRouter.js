@@ -1,5 +1,5 @@
-const express = require("express");
-const router = express.Router();
+import { Router } from "express";
+const router = Router();
 
 // View data variable
 var viewcontext = {
@@ -27,7 +27,4 @@ router.get("/", (req, res)=>{
 
 
 
-
-
-// export router
-module.exports = router;
+export default router;
