@@ -1,9 +1,8 @@
 <template>
     <div class="loader" id="AppLoader" :style="{'display': getDisplayState }">
     <div class="page-loader d-flex flex-column justify-content-between align-items-center">
-        <img src="../assets/images/logo_min.png" width="75" class="loader-icon" alt="page-loader-icon">
-        <span class="loader-title fs-3 fw-bold txt-dark-light mt-2">blox Messenger</span>
-        <span class="loader-bar d-block rounded-4 mt-4"><span class="bar d-block rounded-4"></span></span>
+        <img src="../assets/images/logo.png" width="145" height="145" class="loader-icon" alt="page-loader-icon">
+        <span class="loader-title fs-2 fw-bold title-b mt-3">Blox Messenger</span>
     </div> 
     </div>
 </template>
@@ -25,6 +24,7 @@
    background-color: #ffffff;
    width: 100%;
    height: 100%;
+   z-index: 99999;
  }
  .loader .page-loader{ 
     width:30%;
@@ -44,28 +44,8 @@
     opacity: 0; 
     transform: scale(0.9);
     animation: loader-title-show 0.2s ease-in 1.5s 1 normal forwards;
- } 
- .page-loader .loader-bar{
-    width:75%;
-    height:6px;
-    background-color: #f5f5f5f1;
-    overflow: hidden;
-    opacity: 0;
-    animation: loader-bar-show 0.2s ease-in 2.2s 1 normal forwards;
-    position: relative;
-    z-index: 3;
- }
- .page-loader .loader-bar .bar{
-    width:10%;
-    height:100%;
-    left:0%;
-    position: absolute;
-    z-index: 1;
-    background-color: #673ab7; 
-    animation: loader-bar-item-show 1s ease-in 2.3s infinite normal forwards;
- }
+ }  
 
- 
  @keyframes loader-icon-show {
     0%{opacity: 0;margin-bottom:-50px;}
     80%{opacity: 1;margin-bottom:-50px;}
@@ -74,19 +54,15 @@
  @keyframes loader-title-show {
     0%{opacity: 0;transform: scale(0.9);} 
     100%{opacity: 1;transform: scale(1);}
- }
- @keyframes loader-bar-show {
-    0%{opacity: 0;} 
-    100%{opacity: 1;}
- }
- @keyframes loader-bar-item-show {
-    0%{left:0%;} 
-    100%{left:99%;}
- }
+ } 
 </style>
 
 <script>
-
+/*
+  .Documentation
+   add default settings in view data
+   splashScreen: {show:true, autoHide:true},
+*/
 export default {
       name: "SplashScreen",
       data(){
@@ -105,7 +81,7 @@ export default {
         if(this.splashSettings.autoHide == true){
             setTimeout(()=>{ 
                 this.splashSettings.show = 'none';
-             }, 4500);
+             }, 2800);
           }
       },
       methods: {

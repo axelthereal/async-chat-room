@@ -1,8 +1,33 @@
-/*@font-face {
-    font-family: "Euclid";
-    src: url("");
+@import url("../fonts/Euclid/stylesheet.css");
+@import url("../fonts/Poppins/stylesheet.css");
+
+body{
+    font-family: 'Poppins', Geneva, Verdana, sans-serif;
+    font-weight: 400;
 }
-@font-face {
-    font-family: "Inter";
-    src: url("");
-}*/
+
+.title, .title-smb, .title-b {
+    font-family: 'Euclid Circular', Geneva, Verdana, sans-serif;
+}
+.title{
+   font-weight: 500;
+}
+.title-smb{
+    font-weight: 600;
+}
+.title-b{
+    font-weight: bold; 
+}
+
+.text, .text-smb, .text-b {
+    font-family: 'Poppins', Tahoma, Geneva, Verdana, sans-serif;
+}
+.text{
+   font-weight: 300;
+}
+.text-smb{
+    font-weight: 600;
+}
+.text-b{
+    font-weight: bold;
+}
