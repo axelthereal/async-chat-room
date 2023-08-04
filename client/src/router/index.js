@@ -5,7 +5,7 @@ import SignupView from '../views/SignupView';
 const routes = [
     {
         path: '/',
-        name: 'Home',
+        name: 'Default',
         component: HomeView
     },
     {
