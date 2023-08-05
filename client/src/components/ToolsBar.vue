@@ -31,9 +31,9 @@
 
      <!-- Toolbar-foopter -->
      <div class="toolbar-footer list-group w-100 mt-4 py-2">
-       <div class="list-group-item mx-auto py-2 px-1 list-group-item-toggle rounded-pill cursor-p txt-dark-light d-flex justify-content-center align-items-center flex-column gap-2 border-0 my-1">
-        <span class="item-icon rounded-circle item-icon-btn item-icon-btn-active  d-flex justify-content-center align-items-center title-b bi bi-sun fs-6"></span> 
-        <span class="item-icon rounded-circle item-icon-btn d-flex justify-content-center align-items-center title-b bi bi-moon fs-6"></span> 
+       <div @click="toggleAppTheme" class="list-group-item mx-auto py-2 px-1 list-group-item-toggle rounded-pill cursor-p txt-dark-light d-flex justify-content-center align-items-center flex-column gap-2 border-0 my-1">
+        <span :class="['item-icon rounded-circle item-icon-btn d-flex justify-content-center align-items-center title-b bi bi-sun fs-6', { 'item-icon-btn-active': getAppTheme('light') } ]"></span> 
+        <span :class="['item-icon rounded-circle item-icon-btn d-flex justify-content-center align-items-center title-b bi bi-moon fs-6', { 'item-icon-btn-active': getAppTheme('dark') } ]"></span> 
        </div>
        <div class="list-group-item rounded-0 cursor-p txt-dark-light d-flex justify-content-center align-items-center flex-column border-0 my-3">
         <img src="../assets/images/user1.png" alt="user-profile-img">
@@ -43,13 +43,23 @@
     </div>
 </template>
 
-<script>
+<script> 
+
 export default {
     name: "ToolBar",
     data(){
-      return { 
+      return {
+          appTheme: "dark" 
       }
-    } 
+    },
+     methods:{ 
+       getAppTheme(theme){
+          return this.appTheme == theme ? true : false;
+        },
+        toggleAppTheme(){
+             this.appTheme = this.appTheme == "light" ? "dark" : "light";
+        } 
+     }   
 }
 </script>
 
@@ -77,14 +87,16 @@ export default {
    width: 35px;
    height: 35px;
    color: var(--tc-dark-light);
- }
+   transition:0.3s ease-in;
+ } 
  .toolbar .list-group-item-toggle .item-icon-btn:not(.item-icon-btn-active):hover {
     color: var(--tc-active);
  }
  .toolbar .list-group-item-toggle .item-icon-btn-active{
    background-color: var(--bg-light);
    color:var(--tc-active);
-   box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.13); 
+   box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.05); 
+   transition:0.3s ease-out;
  }
  .toolbar .toolbar-footer{
     position: absolute;

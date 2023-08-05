@@ -16,7 +16,7 @@ import ToolBar from '@/components/ToolsBar.vue';
         return {
                viewtitle: "Chat",
                splashScreen: {show:true, autoHide:true},
-        }
+        } 
       },
       components: {
           SplashScreen,
