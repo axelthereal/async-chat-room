@@ -43,8 +43,8 @@
     </div>
 
     <!-- Toolbar-view -->
-    <div class="toolbar-view p-1 px-4" v-if="activeView">
-      <div class="toolbar-view-header py-4">
+    <div class="toolbar-view p-1" v-if="activeView">
+      <div class="toolbar-view-header py-4 mb-3 px-4">
         <SearchComponent @set-active-view="setActiveView" :main="itemIssActive('search')" />
       </div>
       <ToolBarHome v-if="itemIssActive('home')" />
@@ -117,7 +117,7 @@ export default {
     max-width: 50px;
  }
  .toolbar .isactive {
-    color: var(--tc-active);
+    color: var(--tc-active) !important;
     transition:0.3s ease-out;
  }
  .toolbar .list-group-item-toggle .item-icon-btn{
