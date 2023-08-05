@@ -43,12 +43,22 @@
     </div>
 
     <!-- Toolbar-view -->
-    <div class="toolbar-view" v-if="activeView">
-       
+    <div class="toolbar-view p-1" v-if="activeView">
+      <ToolBarHome v-if="itemIssActive('home')" />
+      <ToolBarSearch v-if="itemIssActive('search')" />
+      <ToolBarGroups v-if="itemIssActive('groups')" />
+      <ToolBarSaved v-if="itemIssActive('saved')" />
+      <ToolBarArchive v-if="itemIssActive('archived')" />
     </div>
 </template>
 
 <script> 
+import ToolBarHome from "@/components/ToolBarHome";
+import ToolBarSearch from "@/components/ToolBarSearch";
+import ToolBarGroups from "@/components/ToolBarGroups";
+import ToolBarSaved from "@/components/ToolBarSaved";
+import ToolBarArchive from "@/components/ToolBarArchive";
+
 export default {
     name: "ToolBar",
     data(){
@@ -58,7 +68,11 @@ export default {
       }
     },
     components:{
-
+          ToolBarHome,
+          ToolBarSearch,
+          ToolBarGroups,
+          ToolBarSaved,
+          ToolBarArchive
     },
      methods:{ 
         getAppTheme(theme){
