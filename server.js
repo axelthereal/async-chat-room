@@ -30,6 +30,7 @@ app.use(session({
 app.use("/", express.static(path.join(__dirname, "client/dist")));
 app.use("/home", express.static(path.join(__dirname, "client/dist")));
 app.use("/signup", express.static(path.join(__dirname, "client/dist")));
+app.use("/chat", express.static(path.join(__dirname, "client/dist")));
 
 // Listen to port
 app.listen(port, ()=>{
