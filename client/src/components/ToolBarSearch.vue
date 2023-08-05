@@ -1,12 +1,12 @@
 <template>
-    <div>
+    <div> 
          <h1>Search</h1>
     </div>
 </template>
 
-<script>
+<script> 
 export default {
-     name: "BarSearch"
+     name: "BarSearch" 
 }
 </script>
 

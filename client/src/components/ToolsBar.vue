@@ -43,7 +43,10 @@
     </div>
 
     <!-- Toolbar-view -->
-    <div class="toolbar-view p-1" v-if="activeView">
+    <div class="toolbar-view p-1 px-4" v-if="activeView">
+      <div class="toolbar-view-header py-4">
+        <SearchComponent @set-active-view="setActiveView" :main="itemIssActive('search')" />
+      </div>
       <ToolBarHome v-if="itemIssActive('home')" />
       <ToolBarSearch v-if="itemIssActive('search')" />
       <ToolBarGroups v-if="itemIssActive('groups')" />
@@ -58,6 +61,7 @@ import ToolBarSearch from "@/components/ToolBarSearch";
 import ToolBarGroups from "@/components/ToolBarGroups";
 import ToolBarSaved from "@/components/ToolBarSaved";
 import ToolBarArchive from "@/components/ToolBarArchive";
+import SearchComponent from "./SearchComponent.vue";
 
 export default {
     name: "ToolBar",
@@ -72,7 +76,8 @@ export default {
           ToolBarSearch,
           ToolBarGroups,
           ToolBarSaved,
-          ToolBarArchive
+          ToolBarArchive,
+          SearchComponent
     },
      methods:{ 
         getAppTheme(theme){
