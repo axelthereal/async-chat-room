@@ -8,7 +8,8 @@
                 <span class="cb-status fs-7 txt-dark-lighter fw-normal text">Sanchez is typing...</span>
               </div>
               <div class="icons nowrap"> 
-                <div class="d-flex gap-4 fs-5 w-100">
+                <div class="d-flex txt-dark-light gap-4 fs-5 w-100">
+                <i class="cursor-p bi bi-search"></i> 
                 <i class="cursor-p bi bi-camera-video"></i> 
                 <i class="cursor-p bi bi-telephone-plus"></i>
                 <i class="cursor-p bi bi-layout-split"></i> 
@@ -21,7 +22,7 @@
         <div class="card-footer py-2 border-0 bg-white px-4">
            <form class="chat-from my-2 formbx form-inline" action="" method="POST">
              <div class="form-group">
-               <input type="text" placeholder="Enter your message..." class="form-control border-0 shadow-none" />
+               <input type="text" placeholder="Enter your message..." class="form-control fs-6 py-2 rounded-3 border-0 shadow-none" />
              </div>
            </form>
         </div>
@@ -46,5 +47,12 @@
   }
   #chatBoxVue .card-header{
      border-bottom:1px solid var(--bg-light-darker) !important;
+  }
+  #chatBoxVue .card-footer .form-control{
+       background-color: var(--bg-light-dark);
+       border:1px solid var(--bg-light-darker) !important;
+  }
+  #chatBoxVue .card-header .icons i:hover{
+     color: var(--tc-active) !important;
   }
 </style>
