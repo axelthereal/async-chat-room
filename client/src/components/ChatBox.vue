@@ -22,7 +22,7 @@
         <div class="card-footer py-2 border-0 bg-white px-4">
            <form class="chat-from my-2 formbx form-inline" action="" method="POST">
              <div class="form-group">
-               <input type="text" placeholder="Enter your message..." class="form-control fs-6 py-2 rounded-3 border-0 shadow-none" />
+               <input type="text" placeholder="Type your message..." class="form-control fs-6 py-2 rounded-3 border-0 shadow-none" />
              </div>
            </form>
         </div>
