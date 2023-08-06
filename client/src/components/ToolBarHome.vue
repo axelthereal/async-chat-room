@@ -5,6 +5,8 @@
        </div>
        <div class="viewcontent list-group mx-0 px-0">
           <MessageListItem />
+          <MessageListItem />
+          <MessageListItem />
        </div>
     </div>
 </template>

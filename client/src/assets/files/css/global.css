@@ -58,6 +58,7 @@
        --tc-active-dark:#3f39bc;
        --tc-black: #0b0b0b;
        --tc-dark:#0d122a;
+       --tc-dark-grey:#1f1f1f;
        --tc-dark-light:#697b93;
        --tc-dark-lighter:#a0a6b0;
 
@@ -85,5 +86,6 @@ body{
 /* text-colors */
 .txt-black{color:var(--tc-black) !important;}
 .txt-dark{color:var(--tc-dark) !important;}
+.txt-darkgrey{color:var(--tc-dark-grey) !important;}
 .txt-dark-light{color:var(--tc-dark-light) !important;}
 .txt-dark-lighter{color:var(--tc-dark-lighter) !important;}

@@ -1,6 +1,7 @@
 <template>
     <div class="mainApp d-flex justify-content-start align-items-center"> 
           <ToolBar />  
+          <ChatBox />
     </div>
     <SplashScreen v-if="splashScreen.show" :settings="splashScreen" />
 </template>
@@ -9,6 +10,7 @@
 <script>
 import SplashScreen from '@/components/SplashScreen.vue';
 import ToolBar from '@/components/ToolsBar.vue';
+import ChatBox from '@/components/ChatBox.vue';
 
    export default {
       name: "ChatView",
@@ -20,7 +22,8 @@ import ToolBar from '@/components/ToolsBar.vue';
       },
       components: {
           SplashScreen,
-          ToolBar
+          ToolBar,
+          ChatBox,
       },
       created (){
         // Set view title

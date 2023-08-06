@@ -149,7 +149,7 @@ export default {
  .toolbar-view{
     position: relative;
     min-width: 78px; 
-    width:25%;  
+    width:21%;  
     height: 100%;  
     background-color: var(--bg-light); 
  }
