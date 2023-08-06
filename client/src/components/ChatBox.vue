@@ -18,7 +18,13 @@
            </div>
         </div>
         <div class="card-body border-0"> Messages here...</div>
-        <div class="card-footer border-0"><h1>Chat Footer</h1></div>
+        <div class="card-footer py-2 border-0 bg-white px-4">
+           <form class="chat-from my-2 formbx form-inline" action="" method="POST">
+             <div class="form-group">
+               <input type="text" placeholder="Enter your message..." class="form-control border-0 shadow-none" />
+             </div>
+           </form>
+        </div>
     </div>
 </template>
 
