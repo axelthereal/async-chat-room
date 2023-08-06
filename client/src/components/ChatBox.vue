@@ -22,7 +22,9 @@
         <!-- Message-Box-Header -->
 
         <!-- Message Chat Content -->
-        <div class="card-body border-0"> Messages here...</div>
+        <div class="card-body chat-content border-0 p-3"> 
+          <MessageItem />
+        </div>
         <!-- */Message-Chat-Content -->
 
         <!-- Message Box Form -->
@@ -44,9 +46,14 @@
 
 
 <script>
+import MessageItem from './MessageItem.vue';
+
  export default {
-     name: "ChatBox"
- }
+    name: "ChatBox",
+    components: { 
+        MessageItem 
+    }
+}
 </script>
 
 
@@ -67,5 +74,14 @@
   }
   #chatBoxVue .bi:hover{
      color: var(--tc-active) !important;
+  }
+  #chatBoxVue .chat-content{
+       overflow-y: scroll !important;
+  }
+  #chatBoxVue .chat-content::-webkit-scrollbar {
+    display: none !important;
+  }
+  #chatBoxVue .chat-content{
+  -ms-overflow-style: none !important;
   }
 </style>
