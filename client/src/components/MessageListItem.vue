@@ -3,8 +3,8 @@
           <img src="../assets/cdn/rickandmorty.png" alt="" class="rounded-circle flex-shrink-0" width="42" height="42">
           <div class="d-flex gap-2 w-100 justify-content-between">
              <div class="d-flex flex-column justify-content-between align-items-start">
-            <span class="groupname fs-6 text txt-darkgrey fw-semibold">Rick and morty</span>
-            <span class="msgcontent fs-7 txt-dark-lighter fw-semibold text-smb">hey man</span>
+            <span class="groupname fs-6 title-b txt-dark fw-medium">Rick and morty</span>
+            <span class="msgcontent fs-7 txt-dark-lighter fw-semibold text">hey man</span>
              </div>
              <div class="text-nowrap mt-2">
                <div class="">
