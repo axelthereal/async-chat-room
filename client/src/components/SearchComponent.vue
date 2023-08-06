@@ -1,5 +1,5 @@
 <template>
-    <div class="form-bx">
+    <div class="form-bx py-1">
         <div @click="checkCurrentIndex()" class="d-flex justify-content-between align-items-center join-form rounded-pill">
           <button type="button" class="btn btn-default pe-1 border-0 shadow-none ps-3"><i class="bi bi-search"></i></button>
           <input v-model="searchq" type="search" class="form-control border-0 shadow-none fs-6 text fw-semibold txt-black" placeholder="Search...">

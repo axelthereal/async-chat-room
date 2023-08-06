@@ -3,7 +3,7 @@
        <div class="viewheader py-1 px-4">
          <h1 class="fs-5 fw-semibold txt-black title-smb">Messages</h1>
        </div>
-       <div class="viewcontent list-group mx-0 px-0">
+       <div class="viewcontent list-group mx-0 px-0 rounded-0">
           <MessageListItem />
           <MessageListItem />
           <MessageListItem />

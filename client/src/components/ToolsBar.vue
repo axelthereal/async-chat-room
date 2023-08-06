@@ -43,15 +43,17 @@
     </div>
 
     <!-- Toolbar-view -->
-    <div class="toolbar-view p-1" v-if="activeView">
-      <div class="toolbar-view-header py-4 mb-3 px-4">
+    <div class="toolbar-view p-0" v-if="activeView">
+      <div class="toolbar-view-header py-2 mb-0 px-4">
         <SearchComponent @set-active-view="setActiveView" :main="itemIssActive('search')" />
       </div>
+      <div class="toolbar-view-content pt-3">
       <ToolBarHome v-if="itemIssActive('home')" />
       <ToolBarSearch v-if="itemIssActive('search')" />
       <ToolBarGroups v-if="itemIssActive('groups')" />
       <ToolBarSaved v-if="itemIssActive('saved')" />
       <ToolBarArchive v-if="itemIssActive('archived')" />
+      </div>
     </div>
 </template>
 
@@ -152,5 +154,10 @@ export default {
     width:21%;  
     height: 100%;  
     background-color: var(--bg-light); 
+    border-right:1px solid var(--bd-light-dark);
  }
-</style>
+ .toolbar-view .toolbar-view-content{
+    height: 100%;
+    background-color: var(--bg-light-dark); 
+ }
+ </style>
