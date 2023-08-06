@@ -37,6 +37,7 @@
      background-color: var(--bg-light-dark);
      padding: 3px 0px 3px 0px;
      overflow: auto;
+     border:1px solid var(--bg-light-darker);
   }
   .join-form input{
     background-color: transparent;

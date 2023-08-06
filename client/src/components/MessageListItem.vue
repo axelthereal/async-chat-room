@@ -1,5 +1,5 @@
 <template>
-    <div class="msg-item py-3 list-group-item-action bg-light px-4 d-flex gap-3 align-items-center list-group-item border-0 rounded-1 cursor-p">
+    <div class="msg-item py-3 list-group-item-action bg-light px-4 d-flex gap-3 align-items-center list-group-item border-0 rounded-0 cursor-p">
           <img src="../assets/cdn/rickandmorty.png" alt="" class="rounded-circle flex-shrink-0" width="42" height="42">
           <div class="d-flex gap-2 w-100 justify-content-between">
              <div class="d-flex flex-column justify-content-between align-items-start">
