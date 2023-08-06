@@ -20,9 +20,14 @@
         </div>
         <div class="card-body border-0"> Messages here...</div>
         <div class="card-footer py-2 border-0 bg-white px-4">
-           <form class="chat-from my-2 formbx form-inline" action="" method="POST">
-             <div class="form-group">
+           <form class="chat-from my-2 formbx d-flex gap-3 align-items-center" action="" method="POST"> 
+              <span class="icon-toggle cursor-p fs-4 bi bi-emoji-smile"></span>
+              <span class="icon-toggle cursor-p fs-4 bi bi-file-plus"></span> 
+             <div class="form-group w-100">
                <input type="text" placeholder="Type your message..." class="form-control fs-6 py-2 rounded-3 border-0 shadow-none" />
+             </div>
+             <div class="nowrap">
+               <span class="icon-toggle cursor-p fs-4 bi bi-mic"></span> 
              </div>
            </form>
         </div>
@@ -52,7 +57,7 @@
        background-color: var(--bg-light-dark);
        border:1px solid var(--bg-light-darker) !important;
   }
-  #chatBoxVue .card-header .icons i:hover{
+  #chatBoxVue .bi:hover{
      color: var(--tc-active) !important;
   }
 </style>
