@@ -1,5 +1,6 @@
 <template>
     <div class="chatbox card border-0" id="chatBoxVue">
+        <!-- Message Box Header -->
         <div class="card-header py-2 border-0 bg-white px-4">
            <div class="cb-info py-1 d-flex justify-content-between align-items-center gap-1">
               <img src="../assets/cdn/rickandmorty.png" alt="" class="rounded-circle cursor-p" width="43" height="43" />
@@ -18,7 +19,13 @@
               </div>
            </div>
         </div>
+        <!-- Message-Box-Header -->
+
+        <!-- Message Chat Content -->
         <div class="card-body border-0"> Messages here...</div>
+        <!-- */Message-Chat-Content -->
+
+        <!-- Message Box Form -->
         <div class="card-footer py-2 border-0 bg-white px-4">
            <form class="chat-from my-2 formbx d-flex gap-3 align-items-center" action="" method="POST"> 
               <span class="icon-toggle cursor-p fs-4 bi bi-emoji-smile"></span>
@@ -31,6 +38,7 @@
              </div>
            </form>
         </div>
+        <!-- */Message-Box-Form -->
     </div>
 </template>
 
