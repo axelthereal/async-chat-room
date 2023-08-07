@@ -40,6 +40,7 @@
        --bg-light-darker:#e0e1e4;
        --bg-light-grey: #ababab;
        --bg-active: #564dea;
+       --bg-active-light: #5a52f6;
        --bg-active-darker:#4c45d6;
        --bg-active-dark:#3f39bc;
        --bg-dark: #0b0b0b;
@@ -80,7 +81,7 @@ body{
     cursor: pointer !important;
 }
 .fs-7{
-    font-size:0.85em;
+    font-size:0.93em;
 }
 .fs-8{
     font-size: 0.75rem;
