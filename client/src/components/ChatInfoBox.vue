@@ -7,7 +7,7 @@
                 <span class="cb-title fs-6 text txt-dark-light fw-medium">Group Info</span> 
               </div>
               <div class="icons nowrap"> 
-                <div class="txt-dark-light fs-5 w-100"> 
+                <div class="txt-dark-lighter fs-5 w-100"> 
                 <i class="cursor-p bi bi-x-circle"></i>
                 </div> 
               </div>

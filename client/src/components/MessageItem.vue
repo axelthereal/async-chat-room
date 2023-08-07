@@ -43,7 +43,7 @@
   }
   #msg-received .msg-texts-bx{
      color: var(--tc-dark-grey); 
-     border: 1px solid var(--bd-light-dark);
+     border: 1px solid var(--bg-light-dark-nutral);
      border-radius: 0px 19px 19px 15px;
   }
   #msg-sent .msg-texts-bx{
