@@ -22,7 +22,7 @@
         <!-- Message-Box-Header -->
 
         <!-- Message Chat Content -->
-        <div class="card-body chat-content border-0 p-3"> 
+        <div class="card-body chat-content border-0 p-4"> 
           <MessageItem />
         </div>
         <!-- */Message-Chat-Content -->
