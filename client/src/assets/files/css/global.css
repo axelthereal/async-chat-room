@@ -44,7 +44,7 @@
        --bg-active-dark:#3f39bc;
        --bg-dark: #0b0b0b;
        --bg-darker: #040404;
-       --bg-dark-grey:#101010;
+       --bg-dark-grey:#131213;
 
        /* Borders-Colors */ 
        --bd-light:#e0e1e4;
@@ -55,11 +55,13 @@
        --bd-active-dark:#4c45d6;
 
        /* Text-Colors */
+       --tc-light: #fff;
+       --tc-light-dark: #eceef1;
        --tc-active:#564dea;
        --tc-active-dark:#3f39bc;
        --tc-black: #0b0b0b;
        --tc-dark:#0d122a;
-       --tc-dark-grey:#1f1f1f;
+       --tc-dark-grey:#070723;
        --tc-dark-light:#697b93;
        --tc-dark-lighter:#a0a6b0;
 

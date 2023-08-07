@@ -72,6 +72,9 @@ import MessageItem from './MessageItem.vue';
        background-color: var(--bg-light-dark);
        border:1px solid var(--bg-light-darker) !important;
   }
+  #chatBoxVue .card-footer .form-control:focus{
+       border:1px solid var(--bg-active) !important;
+  }
   #chatBoxVue .bi:hover{
      color: var(--tc-active) !important;
   }
