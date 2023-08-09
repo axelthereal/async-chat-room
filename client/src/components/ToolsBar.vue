@@ -23,9 +23,9 @@
         <span class="item-icon title-b bi bi-bookmark fs-5"></span>
         <span class="item-label text fw-medium fs-8  mt-1">Saved</span>
        </div> 
-       <div @click="setActiveView('archived')" :class="{ 'isactive':itemIssActive('archived') }"  class="list-group-item rounded-0 cursor-p txt-dark-light d-flex justify-content-center align-items-center flex-column border-0 my-1">
+       <div @click="setActiveView('contacts')" :class="{ 'isactive':itemIssActive('contacts') }"  class="list-group-item rounded-0 cursor-p txt-dark-light d-flex justify-content-center align-items-center flex-column border-0 my-1">
         <span class="item-icon title-b bi bi-archive fs-5"></span>
-        <span class="item-label text fw-medium fs-8  mt-1">Archived</span>
+        <span class="item-label text fw-medium fs-8  mt-1">Contacts</span>
        </div>
      </div>
 
@@ -52,7 +52,7 @@
       <ToolBarSearch v-if="itemIssActive('search')" />
       <ToolBarGroups v-if="itemIssActive('groups')" />
       <ToolBarSaved v-if="itemIssActive('saved')" />
-      <ToolBarArchive v-if="itemIssActive('archived')" />
+      <ToolBarContacts v-if="itemIssActive('contacts')" />
       </div>
     </div>
 </template>
@@ -62,7 +62,7 @@ import ToolBarHome from "@/components/ToolBarHome";
 import ToolBarSearch from "@/components/ToolBarSearch";
 import ToolBarGroups from "@/components/ToolBarGroups";
 import ToolBarSaved from "@/components/ToolBarSaved";
-import ToolBarArchive from "@/components/ToolBarArchive";
+import ToolBarContacts from "@/components/ToolBarContacts";
 import SearchComponent from "./SearchComponent.vue";
 
 export default {
@@ -78,7 +78,7 @@ export default {
           ToolBarSearch,
           ToolBarGroups,
           ToolBarSaved,
-          ToolBarArchive,
+          ToolBarContacts,
           SearchComponent
     },
      methods:{ 
