@@ -21,7 +21,7 @@ app.use(bodyparser.json());
 app.use(session({
        secret: "$node235Tvf23opml@sdf",
        resave: false,
-       saveUninitialized: false,
+       saveUninitialized: false, 
        cookie: {secure:false}
 }));
 
