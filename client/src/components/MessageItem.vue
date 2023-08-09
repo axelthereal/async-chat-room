@@ -43,14 +43,14 @@
   }
   #msg-received .msg-texts-bx{
      color: var(--tc-dark-grey); 
-     border: 1px solid var(--bg-light-dark-nutral);
-     border-radius: 0px 19px 19px 15px;
+     border-radius: 0px 18px 18px 15px;
   }
   #msg-sent .msg-texts-bx{
      color: var(--tc-light-dark);
      background-color: var(--bg-active-light); 
-     border-radius: 19px 0px 15px 19px;
+     border-radius: 18px 0px 15px 18px;
   }
+  
 </style>
 
 <script>
