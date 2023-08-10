@@ -1,7 +1,7 @@
 <template>
     <div class="chatboxinfo card border-0 bg-white" id="chatboxinfo">
         <!-- Info Box Header -->
-        <div class="card-header py-2 border-0 bg-white  px-4">
+        <div class="card-header py-2 border-0 bg-white sticky-top px-4">
             <div class="cb-info py-2 d-flex justify-content-between align-items-center gap-1">
               <div class="cb-data cursor-p w-100 px-2 d-flex flex-column">
                 <span class="cb-title fs-6 text txt-dark-light fw-medium">Group Info</span> 
@@ -18,15 +18,12 @@
         <div class="card-body infobox-content border-0 p-4">
           <div class="infobox-profile infobox-item py-3" align="center">
           <img src="../assets/cdn/spiderman.jpg" alt="" />
-          <h3 class="fs-5 text fw-semibold mt-3 txt-dark">Rick and Morty</h3>
+          <h3 class="fs-5 title fw-semibold mt-3 txt-dark">Rick and Morty</h3>
           <span class="fs-7"><span class="members txt-dark-lighter text">327 Members</span> <span class="txt-dark-lighter fs-8 fw-light mx-1">|</span> <span class="online txt-active text fw-semibold">17 Online</span></span>
           <p class="desc-txt mt-4 fs-7 text txt-dark-lighter fw-medium">
               This is simple group description to tell you how it should look like to be in the group
           </p>
-          <div class="desc-txt mt-4 fs-7 text txt-dark-lighter fw-light d-flex flex-column">
-             <span>Created by <span class="fw-semibold txt-dark-light cursor-p">@axelthereal</span></span>
-             <span class="mt-1 fs-8 txt-dark-light">On 09/08/2023 at 02:35</span>
-          </div>
+          
           </div>
 
           <div class="groupmembersview infobox-item py-3 px-1 cursor-p txt-dark-light d-flex justify-content-between align-items-center">
@@ -60,55 +57,23 @@
    <img src="../assets/cdn/ironman.jpg" alt="" srcset="">
    </span>
 
+   
    <span class="mediafile rounded-3 cursor-p m-1 ms-0">
    <img src="../assets/cdn/ironman.jpg" alt="" srcset="">
    </span>
 
+      
    <span class="mediafile rounded-3 cursor-p m-1 ms-0">
    <img src="../assets/cdn/ironman.jpg" alt="" srcset="">
    </span>
-
-   <span class="mediafile rounded-3 cursor-p m-1 ms-0">
-   <img src="../assets/cdn/ironman.jpg" alt="" srcset="">
-   </span>
-
-   <span class="mediafile rounded-3 cursor-p m-1 ms-0">
-   <img src="../assets/cdn/ironman.jpg" alt="" srcset="">
-   </span>
-
-   <span class="mediafile rounded-3 cursor-p m-1 ms-0">
-   <img src="../assets/cdn/ironman.jpg" alt="" srcset="">
-   </span>
-
-   <span class="mediafile rounded-3 cursor-p m-1 ms-0">
-   <img src="../assets/cdn/ironman.jpg" alt="" srcset="">
-   </span>
-
-   <span class="mediafile rounded-3 cursor-p m-1 ms-0">
-   <img src="../assets/cdn/ironman.jpg" alt="" srcset="">
-   </span>
-
-   <span class="mediafile rounded-3 cursor-p m-1 ms-0">
-   <img src="../assets/cdn/ironman.jpg" alt="" srcset="">
-   </span>
-   <span class="mediafile rounded-3 cursor-p m-1 ms-0">
-   <img src="../assets/cdn/ironman.jpg" alt="" srcset="">
-   </span>
-
-   <span class="mediafile rounded-3 cursor-p m-1 ms-0">
-   <img src="../assets/cdn/ironman.jpg" alt="" srcset="">
-   </span>
-
-   <span class="mediafile rounded-3 cursor-p m-1 ms-0">
-   <img src="../assets/cdn/ironman.jpg" alt="" srcset="">
-   </span>
+   
 
   </div>
   <div class="tab-pane py-2 container fade active" id="filesProfile" role="tabpanel" aria-labelledby="filesProfile-tab">
-  Nothing to show...
+  <p>Nothing to show...</p>
   </div>
   <div class="tab-pane py-2 container fade active" id="linksProfile" role="tabpanel" aria-labelledby="linksProfile-tab">
-    Nothing to show...
+    <p>Nothing to show...</p>
   </div>
 </div>
 
@@ -133,8 +98,7 @@
     height: 100%;  
     background-color: transparent; 
     border-left: 1px solid var(--bg-light-darker) !important;
-  } 
-  
+  }  
   .infobox-profile img{
     width: 93px;
     height: 93px;
@@ -173,5 +137,15 @@
      object-fit: cover;
      width:100%;
      height:100%;
+  }
+  #chatboxinfo{ 
+  overflow-y: scroll;
+  height: 100%;
+  } 
+  #chatboxinfo::-webkit-scrollbar {
+    display: none !important;
+  }
+  #chatboxinfo{
+  -ms-overflow-style: none;
   }
 </style>
