@@ -1,5 +1,5 @@
 <template>
-    <div class="chatbox card border-0" id="chatBoxVue">
+    <div class="chatbox card border-0" id="chatBoxVue" :toggled="toggledState">
         <!-- Message Box Header -->
         <div class="card-header py-2 border-0 bg-white px-4">
            <div class="cb-info py-1 d-flex justify-content-between align-items-center gap-1">
@@ -13,7 +13,7 @@
                 <i class="cursor-p bi bi-search"></i> 
                 <i class="cursor-p bi bi-camera-video"></i> 
                 <i class="cursor-p bi bi-telephone-plus"></i>
-                <i class="cursor-p bi bi-layout-split"></i> 
+                <i class="cursor-p bi bi-layout-split" @click="toggleChatBoxState()"></i> 
                 <i class="cursor-p bi bi-three-dots"></i>
                 </div> 
               </div>
@@ -50,6 +50,20 @@ import MessageItem from './MessageItem.vue';
 
  export default {
     name: "ChatBox",
+    data(){
+      return { 
+        
+      }
+    },
+    props: {
+      toggledState: Boolean
+    },
+    methods: {
+        toggleChatBoxState(){
+          //this.toggledState = !this.toggledState;
+          this.$emit('toggle-infobox-state');
+        }
+    },  
     components: { 
         MessageItem 
     }
@@ -58,13 +72,28 @@ import MessageItem from './MessageItem.vue';
 
 
 <style>
-  #chatBoxVue{
-    position: relative;
-    min-width:100px; 
-    width:74%;  
+  #chatBoxVue[toggled="false"]{
+    width:49%;
+    animation: toggleChatBoxUnShrink 0.5s ease-out 0s 1 normal forwards;
+  }
+  @keyframes toggleChatBoxUnShrink {
+    0%{width:49%;} 
+    100%{width:74%;}
+  }
+  #chatBoxVue[toggled="true"]{
+    width:74%;
+    animation: toggleChatBoxShrink 0.5s ease-in 0s 1 normal forwards; 
+  }
+  @keyframes toggleChatBoxShrink {
+    0%{width:74%;} 
+    100%{width:49%;}
+  }
+  #chatBoxVue{ 
+    position: relative; 
     height: 100%;  
     background-color: transparent; 
   }
+
   #chatBoxVue .card-header{
      border-bottom:1px solid var(--bg-light-darker) !important;
   }

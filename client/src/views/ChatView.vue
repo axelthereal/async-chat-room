@@ -1,8 +1,8 @@
 <template>
     <div class="mainApp d-flex justify-content-start align-items-center"> 
           <ToolBar />  
-          <ChatBox />
-          <ChatBoxInfo />
+          <ChatBox :toggledState="chatBoxToggledState" @toggle-infobox-state="toggleInfoBox" />
+          <ChatBoxInfo :toggled="infoBoxState" @close-info-box="toggleInfoBox"/>
     </div>
     <SplashScreen v-if="splashScreen.show" :settings="splashScreen" />
 </template>
@@ -21,7 +21,15 @@ import ChatBoxInfo from '@/components/ChatInfoBox.vue';
         return {
                viewtitle: "Chat",
                splashScreen: {show:true, autoHide:true},
+               infoBoxState: false,
+               chatBoxToggledState: false
         } 
+      },
+      methods: {
+         toggleInfoBox(){
+             this.infoBoxState = !this.infoBoxState; 
+             this.chatBoxToggledState = !this.chatBoxToggledState;
+         }
       },
       components: {
           SplashScreen,
@@ -40,6 +48,7 @@ import ChatBoxInfo from '@/components/ChatInfoBox.vue';
    .mainApp{ 
     position: fixed;
     width: 100%;
+    min-width: 100%;
     height: 100vh; 
     padding:0;
     margin: 0; 

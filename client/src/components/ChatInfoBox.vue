@@ -1,5 +1,6 @@
 <template>
-    <div class="chatboxinfo card border-0 bg-white" id="chatboxinfo">
+    <div :show="toggled" class="chatboxinfo card border-0 bg-white" id="chatboxinfo">
+    <div class="boxinfo">
         <!-- Info Box Header -->
         <div class="card-header py-2 border-0 bg-white sticky-top px-4">
             <div class="cb-info py-2 d-flex justify-content-between align-items-center gap-1">
@@ -8,7 +9,7 @@
               </div>
               <div class="icons nowrap"> 
                 <div class="txt-dark-lighter fs-5 w-100"> 
-                <i class="cursor-p bi bi-x-circle"></i>
+                <i class="cursor-p bi bi-x-circle" @click="$emit('close-info-box')"></i>
                 </div> 
               </div>
            </div>
@@ -38,13 +39,13 @@
               </div>
              <!-- Nav pills -->
 <ul class="nav nav-tabs mx-0 border-0 gap-0 rounded-pill p-1 d-flex justify-content-between align-items-center" id="nav-tab" role="tablist">
-  <li class="nav-item d-flex align-items-center">
+  <li class="nav-item">
     <a class="nav-link active rounded rounded-pill fs-8 text txt-dark-light fw-semibold" data-bs-toggle="tab" data-bs-target="#mediaProfile" role="tab" aria-controls="mediaProfile" aria-selected="true" href="#mediaProfile">Media</a>
   </li>
-  <li class="nav-item d-flex align-items-center">
+  <li class="nav-item">
     <a class="nav-link rounded rounded-pill fs-8 text txt-dark-light fw-semibold" data-bs-toggle="tab" data-bs-target="#filesProfile" role="tab" aria-controls="filesProfile" aria-selected="true" href="#filesProfile">Files</a>
   </li>
-  <li class="nav-item d-flex align-items-center">
+  <li class="nav-item">
     <a class="nav-link rounded rounded-pill fs-8 text txt-dark-light fw-semibold"  data-bs-toggle="tab" data-bs-target="#linksProfile" role="tab" aria-controls="linksProfile" aria-selected="true" href="#linksProfile">Links</a>
   </li>
 </ul>
@@ -81,24 +82,48 @@
 
         </div>
 
+      </div>
     </div>
 </template>
 
 <script>
   export default {
-      name: "ChatBoxInfo"
+      name: "ChatBoxInfo",
+      props: {
+          toggled: Boolean
+      }
   }
 </script>
 
 <style scoped>
-  #chatboxinfo{
-    position: relative;
-    min-width:100px; 
-    width:25%;  
+  #chatboxinfo[show="false"]{ 
+    width:25%;
+    animation: toggleInfoBoxHide 0.5s ease-out 0s 1 normal forwards; 
+  }
+  @keyframes toggleInfoBoxHide {
+    0%{width:25%;} 
+    100%{width:0%;}
+  }
+  #chatboxinfo[show="true"]{ 
+   width:0%;   
+   animation: toggleInfoBoxShow 0.5s ease-in 0s 1 normal forwards; 
+  }
+  @keyframes toggleInfoBoxShow {
+    0%{width:0%;} 
+    100%{width:25%;}
+  }
+  #chatboxinfo{  
+    position: relative; 
     height: 100%;  
     background-color: transparent; 
-    border-left: 1px solid var(--bg-light-darker) !important;
+    border-left: 1px solid var(--bg-light-darker) !important; 
   }  
+  #chatboxinfo .boxinfo{
+    position: static;
+    width: 100%;
+    height: 100%; 
+    min-width:300px;
+  }
   .infobox-profile img{
     width: 93px;
     height: 93px;
@@ -114,7 +139,9 @@
   }
   #chatboxinfo .groupmediaview .nav-tabs .nav-item{
     width: 30%;
+    text-align: center;
   }
+  #chatboxinfo .groupmediaview .nav-tabs .nav-link{width: 100%;}
   #chatboxinfo .groupmediaview .nav-tabs .nav-item a{
     border: 1px solid var(--bd-light) !important;
   }

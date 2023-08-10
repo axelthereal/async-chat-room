@@ -70,7 +70,7 @@ export default {
     data(){
       return {
           appTheme: "light",
-          activeView: null, 
+          activeView: "home", 
       }
     },
     components:{
@@ -151,6 +151,7 @@ export default {
  .toolbar-view{
     position: relative;
     min-width: 78px; 
+    min-width:21%; 
     width:21%;  
     height: 100%;  
     background-color: var(--bg-light); 
