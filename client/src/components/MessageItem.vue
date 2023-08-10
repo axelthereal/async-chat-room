@@ -43,6 +43,7 @@
   }
   #msg-received, #msg-sent {
     width:60%;  
+    min-width: 60%;
     } 
     #msg-received{
       float: left;

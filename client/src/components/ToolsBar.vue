@@ -19,14 +19,14 @@
         <span class="item-icon title-b bi bi-chat-right-dots fs-5"></span>
         <span class="item-label text fw-medium fs-8  mt-1">Groups</span>
        </div>
-       <div @click="setActiveView('saved')" :class="{ 'isactive':itemIssActive('saved') }"  class="list-group-item rounded-0 cursor-p txt-dark-light d-flex justify-content-center align-items-center flex-column border-0 my-1">
-        <span class="item-icon title-b bi bi-bookmark fs-5"></span>
-        <span class="item-label text fw-medium fs-8  mt-1">Saved</span>
-       </div> 
        <div @click="setActiveView('contacts')" :class="{ 'isactive':itemIssActive('contacts') }"  class="list-group-item rounded-0 cursor-p txt-dark-light d-flex justify-content-center align-items-center flex-column border-0 my-1">
         <span class="item-icon title-b bi bi-person-plus fs-5"></span>
         <span class="item-label text fw-medium fs-8  mt-1">Contacts</span>
        </div>
+       <div @click="setActiveView('saved')" :class="{ 'isactive':itemIssActive('saved') }"  class="list-group-item rounded-0 cursor-p txt-dark-light d-flex justify-content-center align-items-center flex-column border-0 my-1">
+        <span class="item-icon title-b bi bi-bookmark fs-5"></span>
+        <span class="item-label text fw-medium fs-8  mt-1">Saved</span>
+       </div> 
      </div>
 
      <!-- Toolbar-foopter -->

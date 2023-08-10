@@ -4,9 +4,7 @@
          <h1 class="fs-5 fw-semibold txt-black title-smb">Messages</h1>
        </div>
        <div class="viewcontent list-group mx-0 px-0 rounded-0">
-          <MessageListItem />
-          <MessageListItem />
-          <MessageListItem />
+          <MessageListItem /> 
        </div>
     </div>
 </template>
