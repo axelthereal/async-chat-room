@@ -1,6 +1,11 @@
 <template>
-    <div class="mainbody" id="mainView">
-      
+    <div class="mainbody d-flex" id="mainView">
+      <div class="image-banner w-50">
+        <img src="../assets/images/user4.png" alt="" />
+      </div>
+      <div class="page-content w-50">
+        <h1>Hello world</h1>
+      </div>
     </div>
     <SplashScreen v-if="splashScreen.show" :settings="splashScreen" />
 </template>
