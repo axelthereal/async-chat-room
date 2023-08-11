@@ -2,9 +2,11 @@
   <div class="main-body" id="mainView">
     <div class="image-banner"> 
     </div>
-    <div class="page-content py-3">
-      <div class="form-bx w-50 mx-auto mt-5 py-3">
-        <div class="form-bx-header py-2 d-flex flex-column">
+    <div class="page-content py-3" align="center">
+      <img src="../assets/images/logomin.png" class="formlogo" alt=""> 
+      <div class="form-bx w-50 mx-auto mt-3 py-3" align="start">
+
+        <div class="form-bx-header py-2 d-flex flex-column gap-1">
           <span class="fs-2 title fw-bold txt-dark">Open an account</span>
           <span class="fs-6 text fw-light txt-dark-light">Create a new account to start chatting with friends all around the world !</span>
         </div>
@@ -51,7 +53,7 @@
               placeholder="confirm password"
             />
           </div>
-          <button type="button" class="btn btn-primary w-100 my-2 py-2 fs-6 text rounded-3"> Sign in </button>
+          <button type="button" class="btn btn-default text-white w-100 my-2 py-2 fs-6 text rounded-3"> Sign in </button>
         </form>
         <div class="form-bx-footer py-3 mt-2" align="center">
           <p class="fs-6 text fw-light txt-dark-light">Already have an account ? <a href="">Sign Up Now</a></p> 
@@ -101,10 +103,27 @@ export default {
 .main-body .image-banner{ 
   left: 0; 
   position:fixed !important;
-  background-image: url("../assets/cdn/ironman.jpg");
+  background-image: url("../assets/cdn/23985384_6894915.jpg");
   background-position: center;
   background-size: cover;
 }
-
-
+.main-body a{
+  color: var(--tc-active);
+}
+.main-body a:hover {
+  color: var(--tc-active-dark);
+}
+.main-body .page-content .form-control:focus {
+  border:1px solid var(--bd-active) !important;
+}
+.main-body .page-content .btn-default{
+  background-color: var(--bg-active);
+  border:none !important;
+}
+.main-body .page-content .btn-default:hover{
+  background-color: var(--bg-active-darker); 
+}
+.main-body .page-content .btn-default:active{
+  background-color: var(--bg-active-dark); 
+}
 </style>
