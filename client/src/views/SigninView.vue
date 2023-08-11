@@ -107,4 +107,7 @@ export default {
 .main-body .page-content .btn-default:active{
   background-color: var(--bg-active-dark); 
 }
+.main-body form{
+  text-align: start !important;
+}
 </style>
