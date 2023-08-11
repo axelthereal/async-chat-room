@@ -53,7 +53,7 @@
               placeholder="confirm password"
             />
           </div>
-          <button type="button" class="btn btn-default text-white w-100 my-2 py-2 fs-6 text rounded-3"> Sign up </button>
+          <button type="button" @click="redirectTemp()" class="btn btn-default text-white w-100 my-2 py-2 fs-6 text rounded-3"> Sign up </button>
         </form>
         <div class="form-bx-footer py-3 mt-2" align="center">
           <p class="fs-6 text fw-light txt-dark-light">Already have an account ? <router-link to="/signin">Sign Up Now</router-link></p> 
@@ -82,6 +82,11 @@ export default {
     // Set view title
     document.title = "blox | " + this.viewtitle;
   },
+  methods: {
+      redirectTemp(){
+        location.href = "/chat";
+      }
+  }
 }
 </script>
 

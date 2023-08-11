@@ -5,11 +5,11 @@
    </div>
         <div class="msg-content d-flex flex-column gap-2">
           <div class="msg-info d-flex justify-content align-items-center gap-3 ms-2">
-           <span class="username fs-6 title txt-dark">Ucher Gainst</span>  
+           <span class="username fs-6 title txt-dark">User Noname</span>  
            <span class="msgtime fs-7 text txt-dark-lighter fw-medium">17:30</span>
           </div>
           <div class="msg-texts-bx fs-7 text fw-light bg-white py-2 px-3 ms-2">
-            Hello everyone, wasup ?
+            Hello everyone, wasup bruh ?
           </div> 
         </div>
     </div>
@@ -19,14 +19,10 @@
         <div class="msg-content d-flex flex-column align-items-end gap-2">
           <div class="msg-info d-flex justify-content-end align-items-center gap-3 me-2">
            <span class="msgtime fs-7 text txt-dark-lighter fw-medium">17:30</span>
-           <span class="username fs-6 title txt-dark fw-medium">Ucher Gainst</span>  
+           <span class="username fs-6 title txt-dark fw-medium">User Noname again</span>  
           </div>
           <div class="msg-texts-bx fs-7 text py-2 px-3 me-2">
-            Hey, am doing well thanks
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-            Accusamus et eaque ab praesentium sed perferendis inventore aut dolor, 
-            voluptatibus sapiente mollitia officia ad iure autem esse, molestiae 
-            eveniet optio laborum.
+            Hey, am doing well thanks 
           </div> 
         </div>
          <div class="msg-image">
