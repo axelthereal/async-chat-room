@@ -21,7 +21,7 @@
            <span class="msgtime fs-7 text txt-dark-lighter fw-medium">17:30</span>
            <span class="username fs-6 title txt-dark fw-medium">Ucher Gainst</span>  
           </div>
-          <div class="msg-texts-bx fs-7 text fw-light py-2 px-3 me-2">
+          <div class="msg-texts-bx fs-7 text py-2 px-3 me-2">
             Hey, am doing well thanks
             Lorem ipsum dolor sit amet consectetur adipisicing elit. 
             Accusamus et eaque ab praesentium sed perferendis inventore aut dolor, 
@@ -57,7 +57,7 @@
      box-shadow: -2px 2px 3px rgba(0, 0, 0, 0.05);
   }
   #msg-sent .msg-texts-bx{ 
-     color: var(--tc-light); 
+     color: var(--tc-light-dark); 
      background-color: var(--bg-active);
      border-radius: 20px 2px 20px 20px;
      box-shadow: -2px 2px 3px rgba(0, 0, 0, 0.05) !important;

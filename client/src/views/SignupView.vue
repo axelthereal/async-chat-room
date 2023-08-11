@@ -4,13 +4,23 @@
     </div>
     <div class="page-content py-3" align="center">
       <img src="../assets/images/logomin.png" class="formlogo" alt=""> 
-      <div class="form-bx w-50 mx-auto mt-5 py-3" align="start">
+      <div class="form-bx w-50 mx-auto mt-3 py-3" align="start">
 
         <div class="form-bx-header py-2 d-flex flex-column gap-1" align="center">
-          <span class="fs-2 title fw-bold txt-dark">Welcome back</span>
-          <span class="fs-6 text fw-light txt-dark-light">Sign in to your blox account to start chatting</span>
+          <span class="fs-2 title fw-bold txt-dark">Open an account</span>
+          <span class="fs-6 text fw-light txt-dark-light">Create a new account to start chatting with friends all around the world !</span>
         </div>
-        <form action="" method="POST"> 
+        <form action="" method="POST">
+          <div class="form-group py-2">
+          <label for="" class="py-1 fs-7 fw-medium text txt-dark-light">Name </label>
+          <input 
+            type="text" 
+            name="" 
+            id="" 
+            class="form-control shadow-none fs-6 text py-2 rounded-3" 
+            placeholder="name" />
+          </div>
+
           <div class="form-group py-2">
           <label for="" class="py-1 fs-7 fw-medium text txt-dark-light">Email </label>
             <input
@@ -33,11 +43,20 @@
             />
           </div>
 
-           
-          <button type="button" class="btn btn-default text-white w-100 my-2 py-2 fs-6 text rounded-3"> Sign in </button>
+          <div class="form-group py-2">
+            <label for="" class="py-1 fs-7 fw-medium text txt-dark-light">Password Confirmation </label>
+            <input
+              type="password"
+              name=""
+              id=""
+              class="form-control shadow-none fs-6 text py-2 rounded-3"
+              placeholder="confirm password"
+            />
+          </div>
+          <button type="button" class="btn btn-default text-white w-100 my-2 py-2 fs-6 text rounded-3"> Sign up </button>
         </form>
         <div class="form-bx-footer py-3 mt-2" align="center">
-          <p class="fs-6 text fw-light txt-dark-light">Don't have an account ? <router-link to="/signup">Sign Up Now</router-link></p> 
+          <p class="fs-6 text fw-light txt-dark-light">Already have an account ? <router-link to="/signin">Sign Up Now</router-link></p> 
         </div>
       </div>
     </div>
@@ -49,11 +68,11 @@
 import SplashScreen from "../components/SplashScreen.vue";
 
 export default {
-  name: "SigninView",
+  name: "SignupView",
   data() {
     return {
       splashScreen: { show: true, autoHide: true },
-      viewtitle: "Sign in",
+      viewtitle: "Open a new account",
     };
   },
   components: {
@@ -63,7 +82,7 @@ export default {
     // Set view title
     document.title = "blox | " + this.viewtitle;
   },
-};
+}
 </script>
 
 <style scoped>
