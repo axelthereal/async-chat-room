@@ -100,3 +100,15 @@ body{
     width:90px; 
     height: auto; 
 }
+
+/* Animations */
+ /* body-show */
+   .main-body{
+    opacity: 0;
+    animation: mainloader 0.2s ease-in-out 3s 1 normal forwards;
+    animation-timing-function: ease-in;
+   }
+   @keyframes mainloader {
+        0%{ opacity: 0.1; }
+        100%{ opacity: 1; }
+   }

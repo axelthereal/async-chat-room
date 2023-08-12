@@ -1,5 +1,5 @@
 <template> 
-    <div class="container p-5" id="mainview">
+    <div class="main-body container p-5" id="mainview">
     <h1 class="title-b">Big title</h1>
     <h3 class="title-smb">Middle title</h3>
     <h5 class="title">Last text title</h5>

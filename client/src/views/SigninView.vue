@@ -34,7 +34,7 @@
           </div>
 
            
-          <button type="button" class="btn btn-default text-white w-100 my-2 py-2 fs-6 text rounded-3"> Sign in </button>
+          <button type="button" class="btn btn-default text-white w-100 my-2 py-2 fs-6 text rounded-3 d-flex justify-content-center gap-3 align-items-center" btn-state="pending"> Sign in <span class="load-spinner"></span></button>
         </form>
         <div class="form-bx-footer py-3 mt-2" align="center">
           <p class="fs-6 text fw-light txt-dark-light">Don't have an account ? <router-link to="/signup">Sign Up Now</router-link></p> 
@@ -109,5 +109,24 @@ export default {
 }
 .main-body form{
   text-align: start !important;
+}
+
+
+.load-spinner{
+  display: none;
+  width: 20px;
+  height: 20px;
+  background-color:transparent;
+  border:2px solid var(--bd-light);
+  border-radius: 50%;
+  border-top-color: transparent;
+  animation: spinning 0.7s ease-in 0.0s infinite normal; 
+}
+[btn-state="pending"] .load-spinner{
+  display: block;
+}
+@keyframes spinning {
+    0%{ transform: initial;}  
+    100%{ transform: rotate(360deg); }
 }
 </style>

@@ -1,5 +1,5 @@
 <template>
-    <div class="mainApp d-flex justify-content-start align-items-center"> 
+    <div class="main-body mainApp d-flex justify-content-start align-items-center"> 
           <ToolBar />  
           <ChatBox :toggledState="chatBoxToggledState" @toggle-infobox-state="toggleInfoBox" />
           <ChatBoxInfo :toggled="infoBoxState" @close-info-box="toggleInfoBox"/>
