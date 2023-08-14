@@ -3,6 +3,7 @@ import HomeView from '../views/HomeView';
 import SigninView from '../views/SigninView';
 import SignupView from '../views/SignupView';
 import ChatView from '../views/ChatView.vue';
+import OnboardingViewVue from '@/views/OnboardingView.vue';
 
 const routes = [
     {
@@ -29,6 +30,11 @@ const routes = [
         path: '/chat',
         name: 'Chat',
         component: ChatView
+    },
+    {
+        path: '/welcome',
+        name: 'Welcome Page',
+        component: OnboardingViewVue
     }
 ]
 
