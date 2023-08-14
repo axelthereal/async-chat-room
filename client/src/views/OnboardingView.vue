@@ -15,7 +15,9 @@
 
         Or 
 
-        <button class="btn btn-default">An old Group name </button>
+        <div class="chatgroup item">
+        
+        </div>
 
 
      
