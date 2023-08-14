@@ -112,3 +112,30 @@ body{
         0%{ opacity: 0.1; }
         100%{ opacity: 1; }
    }
+
+   /* btns */
+   
+ .btn-outlined{
+    background-color: var(--bg-light);
+    border:1px solid var(--bd-light);
+   }
+   .btn-outlined:hover{
+    background-color: var(--bg-light-dark);
+    border:1px solid var(--bd-light-dark);
+   }
+   .btn-outlined:active{
+    background-color: var(--bg-light-darker) !important;
+    border:1px solid var(--bd-light-dark) !important;
+   }
+  .btn-active{
+    background-color: var(--bg-active);
+    color: var(--tc-light) !important;
+    border:1px solid transparent !important;
+  }
+  .btn-active:hover{
+    background-color: var(--bg-active-darker); 
+  }
+  .btn-active:active{ 
+    background-color: var(--bg-active-dark) !important; 
+  }
+   

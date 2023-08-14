@@ -4,19 +4,31 @@
     </div>
     <div class="page-content py-3" align="center">
       <img src="../assets/images/logomin.png" class="formlogo" alt=""> 
-      <div class="form-bx w-50 mx-auto mt-5 py-3">
+      <div class="form-bx w-50 mx-auto mt-5 py-3" align="left">
 
-        <div class="form-bx-header py-2 d-flex flex-column gap-1" align="left">
+        <div class="form-bx-header py-2 d-flex flex-column gap-1">
           <span class="fs-2 title fw-bold txt-dark">Let's get started !</span>
           <span class="fs-6 text fw-light txt-dark-light">Create a new group or join one to start chatting with friends around the world !</span>
         </div>
 
-        <button class="btn btn-default">Create a new chat group</button>
+        <button class="btn btn-default py-2 my-2 btn-outlined w-100 d-flex justify-content-between align-items-center rounded-2">
+        <span class="fs-6 fw-semibold text txt-dark">Create a new chat group</span>
+        <span class="btn-icon nowrap fs-5 title"><i class="bi bi-plus-square-fill"></i></span>
+        </button>
 
-        Or 
-
-        <div class="chatgroup item">
         
+        <div class="w-100 group-suggestions mt-5">
+        <h4 class="fs-6 text fw-light txt-dark my-3">Or join atleast one group</h4>
+        <div class="chatgroup-item cursor-p d-flex justify-content-between align-items-center w-100 gap-3 p-2 rounded-2 my-2">
+           <img src="../assets/cdn/ironman.jpg" class="rounded-3" alt="" />
+           <div class="group-info d-flex flex-column justify-content-center align-items-start w-100">
+             <span class="fs-6 fw-semibold text txt-dark">Group name</span>
+             <span class="fs-7 fw-medium text txt-dark-light">235 Members</span>
+           </div>
+           <div class="nowrap">
+            <button class="btn btn-default btn-active w-100">Join</button>
+           </div>
+        </div>
         </div>
 
 
@@ -79,20 +91,17 @@ export default {
 .main-body .page-content .form-control:focus {
   border:1px solid var(--bd-active) !important;
 }
-.main-body .page-content .btn-default{
-  background-color: var(--bg-active);
-  border:none !important;
-}
-.main-body .page-content .btn-default:hover{
-  background-color: var(--bg-active-darker); 
-}
-.main-body .page-content .btn-default:active{
-  background-color: var(--bg-active-dark); 
-}
-.main-body form{
-  text-align: start !important;
+
+.chatgroup-item{
+    width:100%; 
+    border: 1px solid var(--bd-light);
 }
 
+.chatgroup-item img{
+    width:50px;
+    height:50px;
+    object-fit: cover;
+}
 
 .load-spinner{
   display: none;
