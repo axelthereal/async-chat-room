@@ -10,6 +10,14 @@
           <span class="fs-2 title fw-bold txt-dark">Let's get started !</span>
           <span class="fs-6 text fw-light txt-dark-light">Create a new group or join one to start chatting with friends around the world !</span>
         </div>
+
+        <button class="btn btn-default">Create a new chat group</button>
+
+        Or 
+
+        <button class="btn btn-default">An old Group name </button>
+
+
      
       </div>
     </div>
