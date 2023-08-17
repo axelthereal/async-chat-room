@@ -30,10 +30,8 @@
             ></textarea>
           </div>
 
-          <button type="button" class="btn btn-default btn-active text-white w-100 my-2 py-2 fs-7 text rounded-3 d-flex justify-content-center gap-3 align-items-center" btn-state="pending"> Create <span class="load-spinner"></span></button>
-
-
-          
+        <button type="button" class="btn btn-default btn-active text-white w-100 my-2 py-2 fs-7 text rounded-3 d-flex justify-content-center gap-3 align-items-center" btn-state="pending"> Create <span class="load-spinner"></span></button>
+   
         <button type="button" class="btn btn-default my-2 btn-outlined w-100 rounded-3" @click="$emit('toggle-popup', false)">
         <span class="fs-7 fw-semibold text txt-dark">Cancel</span> 
         </button>
