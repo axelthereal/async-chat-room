@@ -11,7 +11,7 @@
           <span class="fs-6 text fw-light txt-dark-light">Create a new group or join one to start chatting with friends around the world !</span>
         </div>
 
-        <button class="btn btn-default py-2 my-2 btn-outlined w-100 d-flex justify-content-between align-items-center rounded-2">
+        <button class="btn btn-default py-2 my-2 btn-outlined w-100 d-flex justify-content-between align-items-center rounded-2" @click="toggleCreateGroup()">
         <span class="fs-6 fw-semibold text txt-dark">Create a new chat group</span>
         <span class="btn-icon nowrap fs-5 title"><i class="bi bi-plus-square-fill"></i></span>
         </button>
@@ -19,6 +19,7 @@
         
         <div class="w-100 group-suggestions mt-5">
         <h4 class="fs-6 text fw-light txt-dark my-3">Or join atleast one group</h4>
+
         <div class="chatgroup-item cursor-p d-flex justify-content-between align-items-center w-100 gap-3 p-2 rounded-2 my-2">
            <img src="../assets/cdn/ironman.jpg" class="rounded-3" alt="" />
            <div class="group-info d-flex flex-column justify-content-center align-items-start w-100">
@@ -29,29 +30,42 @@
             <button class="btn btn-default btn-active w-100">Join</button>
            </div>
         </div>
+
         </div>
-
-
+         
+        <button class="mt-5 fs-6 btn btn-default py-2 btn-active w-100 d-flex justify-content-center align-items-center gap-3 rounded-3">
+          <span class="fw-medium text">Continue</span> 
+          <span class="btn-icon"><i class="bi bi-arrow-right"></i></span>
+        </button>
      
       </div>
     </div>
     </div>
+  <CreateGroupComponent :isActive="newGroupPopupState" @toggle-popup="toggleCreateGroup" />  
   <SplashScreen v-if="splashScreen.show" :settings="splashScreen" />
 </template>
 
 <script>
 import SplashScreen from "../components/SplashScreen.vue";
+import CreateGroupComponent from "../components/actioncomponents/CreateGroupComponent.vue";
 
 export default {
     name: "OnboardingView",
     data(){
         return {
-            splashScreen: { show: true, autoHide: true },
+            splashScreen: { show: false, autoHide: true },
             viewtitle: "Welcome !",
+            newGroupPopupState: false
         }
     },
     components: {
-        SplashScreen
+        SplashScreen,
+        CreateGroupComponent
+    },
+    methods: {
+      toggleCreateGroup(nState = !this.newGroupPopupState){
+           this.newGroupPopupState = nState;
+      } 
     },
   created() {
     // Set view title
@@ -73,7 +87,7 @@ export default {
 .main-body .image-banner, .main-body .page-content {
     width: 50%;
     height:100vh !important;  
-    z-index: 1;
+    z-index: 1; 
 }
 .main-body .image-banner{ 
   left: 0; 

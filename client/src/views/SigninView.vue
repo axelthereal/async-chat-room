@@ -10,7 +10,7 @@
           <span class="fs-2 title fw-bold txt-dark">Welcome back</span>
           <span class="fs-6 text fw-light txt-dark-light">Sign in to your blox account to start chatting</span>
         </div>
-        <form action="" method="POST"> 
+        <form method="POST"> 
           <div class="form-group py-2">
           <label for="" class="py-1 fs-7 fw-medium text txt-dark-light">Email </label>
             <input
