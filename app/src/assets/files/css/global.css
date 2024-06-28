@@ -1,0 +1,141 @@
+/* fonts */
+@import url("../fonts/Euclid/stylesheet.css");
+@import url("../fonts/Poppins/stylesheet.css");
+
+.title, .title-smb, .title-b {
+    font-family: 'Euclid Circular', Geneva, Verdana, sans-serif;
+}
+.title{
+   font-weight: 500;
+}
+.title-smb{
+    font-weight: 600;
+}
+.title-b{
+    font-weight: bold; 
+}
+
+.text, .text-smb, .text-b {
+    font-family: 'Poppins', Tahoma, Geneva, Verdana, sans-serif;
+}
+.text{
+   font-weight: 300;
+}
+.text-smb{
+    font-weight: 600;
+}
+.text-b{
+    font-weight: bold;
+}
+/* --fonts */
+
+/* Globals */
+ /* Color Themes */
+  :root{
+    /* Light-Theme */
+      /* Backgrounds-Colors */
+       --bg-light: #fff;
+       --bg-light-dark-nutral: #eceef1;
+       --bg-light-dark: #eff2f6;
+       --bg-light-darker:#e0e1e4;
+       --bg-light-grey: #ababab;
+       --bg-active: #2b6eff;
+       --bg-active-light: #3f78f4;
+       --bg-active-darker:#453ced;
+       --bg-active-dark:#3c34db;
+       --bg-dark: #0b0b0b;
+       --bg-darker: #040404;
+       --bg-dark-grey:#131213;
+
+       /* Borders-Colors */ 
+       --bd-light:#e0e1e4;
+       --bd-light-dark:#dcd9d9;
+       --bd-dark:#0b0b0b;
+       --bd-darker:#040404;
+       --bd-active:#2b6eff;
+       --bd-active-dark:#453ced;
+
+       /* Text-Colors */
+       --tc-light: #fff;
+       --tc-light-dark: #eceef1;
+       --tc-active:#2b6eff;
+       --tc-active-dark:#453ced;
+       --tc-black: #0b0b0b;
+       --tc-dark:#2d2f33;
+       --tc-dark-grey:#0f0f25;
+       --tc-dark-light:#697b93;
+       --tc-dark-lighter:#a0a6b0;
+
+    }
+body{
+    font-family: 'Poppins', Geneva, Verdana, sans-serif;
+    font-weight: 400;
+    font-size:0.85em;
+    color:var(--tc-dark);
+    background: var(--bg-light);
+}
+*{
+ box-sizing: border-box !important;
+}
+.cursor-p{
+    cursor: pointer !important;
+}
+.fs-7{
+    font-size:0.93em;
+}
+.fs-8{
+    font-size: 0.75rem;
+}
+
+/* text-colors */
+.txt-black{color:var(--tc-black) !important;}
+.txt-dark{color:var(--tc-dark) !important;}
+.txt-active{color:var(--tc-active) !important;}
+.txt-darkgrey{color:var(--tc-dark-grey) !important;}
+.txt-dark-light{color:var(--tc-dark-light) !important;}
+.txt-dark-lighter{color:var(--tc-dark-lighter) !important;}
+
+/* global-logo */ 
+.formlogo{ 
+    width:90px; 
+    height: auto; 
+}
+
+/* Animations */
+ /* body-show */
+   .main-body{
+    opacity: 0;
+    animation: mainloader 0.2s ease-in-out 3s 1 normal forwards;
+    animation-timing-function: ease-in;
+   }
+   @keyframes mainloader {
+        0%{ opacity: 0.1; }
+        100%{ opacity: 1; }
+   }
+
+   /* btns */
+   
+ .btn-outlined{
+    background-color: var(--bg-light);
+    border:1px solid var(--bd-light);
+   }
+   .btn-outlined:hover{
+    background-color: var(--bg-light-dark);
+    border:1px solid var(--bd-light-dark);
+   }
+   .btn-outlined:active{
+    background-color: var(--bg-light-darker) !important;
+    border:1px solid var(--bd-light-dark) !important;
+   }
+  .btn-active{
+    background-color: var(--bg-active);
+    color: var(--tc-light) !important;
+    border:1px solid transparent !important;
+  }
+  .btn-active:hover{
+    background-color: var(--bg-active-darker); 
+  }
+  .btn-active:active{ 
+    background-color: var(--bg-active-dark) !important; 
+  }
+   
