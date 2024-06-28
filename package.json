@@ -6,8 +6,8 @@
   "main": "server.js",
   "scripts": {
     "start": "node --watch server.js",
-    "serve": "npm run serve --prefix client",
-    "build": "npm run build --prefix client",
+    "serve": "npm run serve --prefix app",
+    "build": "npm run build --prefix app",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
